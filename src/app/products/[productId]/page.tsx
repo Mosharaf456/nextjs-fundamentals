@@ -9,6 +9,13 @@ Dynamic routes are created by placing square brackets [] in the file name.
 
 It is importent to use in the list detailed patteren in any UI.
 */
+/* 
+**********Here Nested Dynamic Routes********
+http://localhost:3000/products/1/reviews/1
+http://localhost:3000/products/1/reviews/2
+Then comes the nested dynamic routes.
+
+*/
 export default function ProductDetails({ params }: {
     params: {
         productId: string
