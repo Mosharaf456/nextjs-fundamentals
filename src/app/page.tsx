@@ -32,6 +32,14 @@ If folder, file is not esits in the app folder then it will shows 404 not found 
 - Nested routes can be used to create a hierarchy of pages.
 
 */
+
+/*
+**********Dynamic Routes********
+It is not always fesible to define route using static path/ predefined paths SPECIALLY FOR COMPLEX application.
+Like 1000 of products, 1000 of users, 1000 of blogs etc not to add dir 1000 for that.
+So Next js provides a way to create dynamic routes.
+Dynamic routes are created by placing square brackets [] in the file name.
+*/
 export default function Home() {
     return (
         <div>
