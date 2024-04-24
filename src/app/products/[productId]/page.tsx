@@ -15,6 +15,8 @@ http://localhost:3000/products/1/reviews/1
 http://localhost:3000/products/1/reviews/2
 Then comes the nested dynamic routes.
 
+Note: Speaking of nested dynamic path segments , NEXT js offers another features to handle this scenario.
+
 */
 export default function ProductDetails({ params }: {
     params: {
