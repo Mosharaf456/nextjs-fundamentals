@@ -16,6 +16,24 @@ http://localhost:3000/products/1/reviews/2
 Then comes the nested dynamic routes.
 
 Note: Speaking of nested dynamic path segments , NEXT js offers another features to handle this scenario.
+That is Catch-all Segements 
+6. Documentation site 
+http://localhost:3000/docs/feature1/concept1/example1
+http://localhost:3000/docs/feature2/concept2/example1
+
+Feature1 - concept 1, concept 2 , concept 3 
+Feature2 - concept 1, concept 2 , concept 3 
+F3 -
+F4 -
+
+Next JS has file system based routing mechanism.
+400 routes the 400 folder files are created: Not feasible
+Then use dynamic routes by replacing concept files . 
+
+one file: Catch-all Segements feature could one file catch up all route segements in the URL.
+[...slug] --- common convention for catch-all segements.
+add basic page.tsx file in the folder.
+
 
 */
 export default function ProductDetails({ params }: {
