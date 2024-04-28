@@ -4,6 +4,7 @@ http://localhost:3000/comments/feature1/concept1
 optinal catch all route [[...slug]]
 optinal catch al URL:
 http://localhost:3000/comments
+// optinal chaining operator ? in typescript.
 
 */
 export default function Comments({ params }: {
