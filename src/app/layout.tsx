@@ -1,3 +1,30 @@
+/*
+******Routing Metadata :********
+Ensuring proper search engine optimization(SEO) is cucial for increasing visibility and attracting users.
+
+Next js introduced the Metadata API which allows you to define metadata for each page.
+Metadata ensure accurate and relevant information is displayed when the page is shared or indexed on social media or search engines.
+Configuring metadata:
+layout.tsx or page.tsx
+
+Export static metadata object 
+Or export dynamic generateMetadata function.
+
+*********Metadata rules:********
+Both layout.tsx and page.tsx can export metadata. If defined in a layout , it applies to all pages in that layout 
+But if defined in a page, it applies only to that page.
+Metadata is read in order , from the root level down to the final page level.
+
+When there,s metadata in multiple places for the same route, they get combined, but page metadata will replace 
+layout metadata if they have same properties.
+This rule applies to any level of nested layouts and pages in the app.
+
+Dynamic metadata --
+the current route parameters, external data or metadata in parent segment.
+
+To define dynamic metadata, export a function named generateMetadata that accepts the current route parameters as an argument.
+
+*/
 import type { Metadata } from 'next'
 
 export const metadata : Metadata = {
