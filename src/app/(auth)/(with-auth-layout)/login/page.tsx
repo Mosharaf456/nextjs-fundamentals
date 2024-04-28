@@ -22,6 +22,14 @@ That component accept child props and render them.
 
 Layout can be nexted
 
+This approach of nested layout allows us to create layout that apply to only to specific areas of our app. 
+ 
+ Route groups uses to organize your project in a manner that doesn,t affect the URL path structure.
+ 
+ Another value of use of the route group is to selectively apply a layout to certain segments by leaving others unchanged.
+ Large projects used with numerous layouts and route segments can be organized in a more manageable way.
+ 
+
 
 
 */
