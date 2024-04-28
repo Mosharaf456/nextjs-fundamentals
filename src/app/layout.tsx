@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata : Metadata = {
-  title: 'NEXT JS Fundamentals',
+  title: {
+    absolute: '', // ignore title.template 
+    default: 'My site title - MH',
+    template: '%s | Mosharaf Hossain',
+  },
   description: 'My site description',
 }
 
