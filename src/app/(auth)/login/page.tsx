@@ -20,6 +20,10 @@ A layout is UI that is shared across multiple pages in the app.
 Define a layout in a file named as layout.js or  layout.tsx .
 That component accept child props and render them.
 
+Layout can be nexted
+
+
+
 */
 export default function Login() {
     return (
