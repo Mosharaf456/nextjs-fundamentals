@@ -14,6 +14,11 @@ http://localhost:3000/login
 http://127.0.0.1:3000/login
 
 
+Layouts 
+A page is UI that is unique to a Route
+A layout is UI that is shared across multiple pages in the app.
+Define a layout in a file named as layout.js or  layout.tsx .
+That component accept child props and render them.
 
 */
 export default function Login() {
