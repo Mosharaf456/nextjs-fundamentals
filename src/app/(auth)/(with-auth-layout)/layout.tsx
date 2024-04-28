@@ -13,19 +13,16 @@
  Another value of use of the route group is to selectively apply a layout to certain segments by leaving others unchanged.
  Large projects used with numerous layouts and route segments can be organized in a more manageable way.
  */
- export default function RootLayout({
+
+export default function RootLayout({
     children,
   }: {
     children: React.ReactNode
   }) {
     return (
       <>
+        <h2>Inner Layout</h2>
         {children}
-        <h2>Features products</h2>
-        
-        {/* Carousel here */}
-
       </>
     )
 }
-  
