@@ -36,12 +36,35 @@ add basic page.tsx file in the folder.
 
 
 */
-export default function ProductDetails({ params }: {
+
+import { Metadata } from "next";
+
+type Props = {
     params: {
         productId: string
     }
-}) {
+}
+
+// export const generateMetadata = ({ params }: Props ): Metadata => {
+//     return {
+//         title: `Product ${params.productId}`,
+//     }
+// }
+
+export const generateMetadata = async ({ params }: Props ): Promise<Metadata> => {
+    const title = await new Promise<string>((resolve) => {
+        setTimeout(() => {
+            resolve(`Product ${params.productId}`)
+        }, 100)
+    });
+    return {
+        title: `Product ${params.productId}`,
+    }
+};
+
+export default function ProductDetails({ params }: Props) {
     return (
         <h1>About Product Details {params.productId}</h1>
     )
 }
+
