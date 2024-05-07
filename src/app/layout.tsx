@@ -27,9 +27,9 @@ To define dynamic metadata, export a function named generateMetadata that accept
 */
 import type { Metadata } from 'next'
 
-export const metadata : Metadata = {
+export const metadata : Metadata = { // static metadata object
   title: {
-    absolute: '', // ignore title.template 
+    absolute: '', // it ignore title.template 
     default: 'My site title - MH',
     template: '%s | Mosharaf Hossain',
   },

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        absolute: 'My Blog - MH',
+        absolute: 'My Blog Page- MH',
     }
 }
 
