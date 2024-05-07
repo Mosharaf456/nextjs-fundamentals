@@ -1,5 +1,5 @@
 /*
-****Route Grpups - Allows us to logically group our routes and project files without affecting the URL path structure.
+****Route Groups - Allows us to logically group our routes and project files without affecting the URL path structure.
 Ex: Implement authenticated routes.
 Register, Login, Forgot password .
 
@@ -20,16 +20,9 @@ A layout is UI that is shared across multiple pages in the app.
 Define a layout in a file named as layout.js or  layout.tsx .
 That component accept child props and render them.
 
-Layout can be nexted
+Layout can be nested
 
 This approach of nested layout allows us to create layout that apply to only to specific areas of our app. 
- 
- Route groups uses to organize your project in a manner that doesn,t affect the URL path structure.
- 
- Another value of use of the route group is to selectively apply a layout to certain segments by leaving others unchanged.
- Large projects used with numerous layouts and route segments can be organized in a more manageable way.
- 
-
 
 
 */
@@ -38,7 +31,14 @@ export default function Login() {
     return (
         <>
             <Link href='/'>Home</Link>
-            <h1>Login</h1>
+            <h1>Login page</h1>
+            <input type='text' placeholder='Username' />
+            <br />
+            <br />
+            <input type='password' placeholder='Password' />
+            <br />
+            <br />
+            <button>Login</button>
         </>
     )
 }
