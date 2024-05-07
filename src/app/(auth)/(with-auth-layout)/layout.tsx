@@ -29,7 +29,7 @@ export default function AuthLayout({
   }) {
     return (
       <>
-        <h2>Inner Layout from route group</h2>
+        <h2>Inner Layout from route group AuthLayout</h2>
         {children}
       </>
     )
