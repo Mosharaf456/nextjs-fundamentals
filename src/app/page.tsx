@@ -1,6 +1,6 @@
 /*
 
-React Server Components(RSC) Conditions:
+#1. React Server Components(RSC) Conditions:
 React server component is a new architecture introduced by the React team in v18 which was quickly embraced by NEXT JS.
 The architecture introduced a new way of creating React components, spilitting them into two types: 
 - Server components and 
@@ -18,14 +18,16 @@ To use hooks or handle/manage user interactions, you need to create a client com
 
 
 
-**********Next js Routing********
+#2.**********Next js Routing********
+NEXT JS has a file based routing mechanisim but doesn,t mean every file is not a route.
+
 Next js uses the file system to create routes for the application.
 - Each file in the pages directory is a route.
 URl paths that users can access in the browser are created from the file names and folders in your code base.
-Convention:
-All routes must be placed inside the app folder.
-Every file that corresponds to a route must be named page.js or page.tsx
-Each folder corresponds to a path segment in the browser URL.
+**Routing Convention to make the file as a route:**
+1. All routes must be placed inside the app folder.
+2. Every file that corresponds to a route must be named page.js or page.tsx
+3. Each folder corresponds to a path segment in the browser URL.
 
 After this convention are followed the file automatically be available as a route.
 
@@ -94,6 +96,7 @@ To use it , we need to import it from "next/link"
 */
 
 import Link from 'next/link'
+
 export default function Home() {
     return (
         <div>
