@@ -78,7 +78,6 @@ export default function RootLayout({
           <footer
             style={{
               marginTop: 'auto',
-              
               background: 'lightblue',
               textAlign: 'center',
               padding: '1rem',
