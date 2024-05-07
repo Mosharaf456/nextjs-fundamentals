@@ -1,4 +1,23 @@
 /*
+
+React Server Components(RSC) Conditions:
+React server component is a new architecture introduced by the React team in v18 which was quickly embraced by NEXT JS.
+The architecture introduced a new way of creating React components, spilitting them into two types: 
+- Server components and 
+- Client components.
+
+Server components
+In NEXT JS , all components are server components by default.
+reading file or fetching data from a database is done on the server component.
+However , they don,t have the ability to use hooks or handle user interactions.
+
+Client component
+It,s necessary to add 'use client' at the top of the component file to create a client component.
+They didn,t have the ability to read files like server components.
+To use hooks or handle/manage user interactions, you need to create a client component.It,s traditional React component.
+
+
+
 **********Next js Routing********
 Next js uses the file system to create routes for the application.
 - Each file in the pages directory is a route.
@@ -65,10 +84,25 @@ the current route parameters, external data or metadata in parent segment.
 
 To define dynamic metadata, export a function named generateMetadata that accepts the current route parameters as an argument.
 
+
+****Navigation****
+Navigation in Next js is handled by the Link component.
+To enable client side navigation Next.js provide us with the Link component.
+The <Link> component is a React component that extends the HTML <a> element and it,s the primary way to navigate between routes in Next.js 
+To use it , we need to import it from "next/link" 
+
 */
+
+import Link from 'next/link'
 export default function Home() {
     return (
         <div>
+            <div style={{display: 'flex', justifyContent: 'space-around', }}>
+                <Link href="/about"> About </Link>
+                <Link href="/products"> Products </Link>
+                <Link href="/login"> Login </Link>
+                <Link href="/register"> Register </Link>
+            </div>
             <h1>Welcome Home!</h1>
         </div>
     )
