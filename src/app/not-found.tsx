@@ -5,7 +5,7 @@ It,s a conventional way to create a not-found component in the src/app folder na
 export default function NotFound() {
     return (
         <div>
-            <h1>404 - Page Not Found!!!!!!!</h1>
+            <h1>404 - Page Not Found root!!!!!!!</h1>
         </div> 
     );
 }
