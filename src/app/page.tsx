@@ -61,6 +61,17 @@ Like 1000 of products, 1000 of users, 1000 of blogs etc not to add dir 1000 for 
 So Next js provides a way to create dynamic routes.
 Dynamic routes are created by placing square brackets [] in the file name.
 
+***File collocation***
+Note: route isn,t publically accessible untill page.js or page.tsx is not added to the respective route segment.
+Project files can be safely collocated inside route segments if you want to render line chart component or BarChart component in the dashboard page.
+Simply included the line chart component or BarChart component in the dashboard page of default exported component which is dashboard in our case.
+
+Note: collocate your project files within the app directory it is not mandatory , you can keep them outside the app directory as well.
+Within the source folder, you can create a seperate component folder for your project files and keep them there.
+******It is good idea to define all your UI components in that directory and alos perfectly valid. ******
+
+
+
 ******Routing Metadata :********
 Ensuring proper search engine optimization(SEO) is cucial for increasing visibility and attracting users.
 

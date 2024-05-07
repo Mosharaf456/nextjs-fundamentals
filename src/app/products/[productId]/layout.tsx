@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     return (
       <>
         {children}
-        <h2>Features products</h2>
+        <h2>Features products from layout</h2>
         
         {/* Carousel here */}
 

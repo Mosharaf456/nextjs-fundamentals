@@ -1,5 +1,5 @@
 /*
-Route Grpups - Allows us to logically group our routes and project files without affecting the URL path structure.
+****Route Grpups - Allows us to logically group our routes and project files without affecting the URL path structure.
 Ex: Implement authenticated routes.
 Register, Login, Forgot password .
 
@@ -33,8 +33,12 @@ This approach of nested layout allows us to create layout that apply to only to 
 
 
 */
+import Link from 'next/link';
 export default function Login() {
     return (
-        <h1>Login</h1>
+        <>
+            <Link href='/'>Home</Link>
+            <h1>Login</h1>
+        </>
     )
 }

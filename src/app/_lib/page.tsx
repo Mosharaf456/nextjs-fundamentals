@@ -1,14 +1,17 @@
 /*
-This is a private route that can't be viewed on the browser.
+Private folders/route implementation details without considering in the public routing system.
+
+This is a private route _lib that can't be viewed on the browser. 
 Contd.
 1. Separating UI logic from routing logic.
 2. Consistently organising internal files across a project.
 3. For sorting and grouping files in code editors.
 4. For avoiding potential naming conflicts with other future Next.js file conventions.
-
 Like for utility functions used.
 
-On side note - if you want to include an underscore in the URL, you can prefix folder name with %5F , which is the URL-encoded form of an underscore.
+
+On the other hand public route: On side note - if you want to include an underscore in the URL, 
+you can prefix folder name with %5F , which is the URL-encoded form of an underscore.
 And acessible on the url with _lib
 
 

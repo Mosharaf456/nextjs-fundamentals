@@ -1,5 +1,11 @@
 /*
 Every page in the app router receive a router parameter as a prop (object).
+{params}:{
+    params: {
+        productId: string
+    }
+}
+params is props provided by next js to the page component.
 
 **********Dynamic Routes********
 It is not always fesible to define route using static path/ predefined paths SPECIALLY FOR COMPLEX application.
@@ -39,6 +45,8 @@ add basic page.tsx file in the folder.
 
 import { Metadata } from "next";
 
+import Link  from 'next/link';
+ 
 type Props = {
     params: {
         productId: string
@@ -64,7 +72,13 @@ export const generateMetadata = async ({ params }: Props ): Promise<Metadata> =>
 
 export default function ProductDetails({ params }: Props) {
     return (
-        <h1>About Product Details {params.productId}</h1>
+        <>
+            <Link href='/products'>Product Lists</Link>
+            <h1>About Product Details {params.productId}</h1>
+            <h3><Link href={`/products/${params.productId}/reviews/1`}>Review 1</Link></h3>
+            <h3><Link href={`/products/${params.productId}/reviews/2`}>Review 2</Link></h3>
+
+        </>
     )
 }
 

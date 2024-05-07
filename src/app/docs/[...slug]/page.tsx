@@ -1,7 +1,15 @@
-// any url can catch that contain /docs/* 
-// length 2 means 2 segments in the URL
-// catch all route [...slug]
-// http://localhost:3000/docs/feature1/concept1
+/*
+ ****** catch all route
+ any url can catch that contain /docs/* 
+ length 2 means 2 segments in the URL
+ catch all route [...slug]
+ captures all the segments in the URL , this is usefull for creating a documentation site.
+
+ multiple variations of the URL can be captured by a single file.
+ http://localhost:3000/docs/feature1/concept1/example1
+ http://localhost:3000/docs/feature1/concept1
+
+*/
 
 export default function Docs({ params }: {
     params: {

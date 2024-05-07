@@ -1,10 +1,15 @@
-/* any url can catch that contain /comments/* 
+/* 
+***optinal catch all segments 
+any url can catch that contain /comments/* 
 length 2 means 2 segments in the URL
 http://localhost:3000/comments/feature1/concept1
+
 optinal catch all route [[...slug]]
-optinal catch al URL:
+optinal catch all URL:
 http://localhost:3000/comments
-// optional chaining operator ? in typescript.
+Same page will be rendered for both URL /comments/* , /comments
+
+optional operator ? in typescript.
 
 */
 export default function Comments({ params }: {
