@@ -1,4 +1,5 @@
 /* 
+******template
 To determine the active links NEXT JS provides usePathname hook FROM next/navigation. 
 This hook returns the current URL path.
 ex. /login, /register, /forgot-pass
