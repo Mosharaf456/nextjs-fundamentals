@@ -11,8 +11,13 @@ After build the Production run:
 npm run start
 
 In production we can see ErrorBoundary error in review id
- */
-// http://localhost:3000/products/10088/reviews/1
+
+http://localhost:3000/products/10088/reviews/1
+
+*/
+
+"use client";
+
 import Link from "next/link"; // for client side navigation
 import { notFound } from "next/navigation";   // programatically render not found page 
 
@@ -21,8 +26,8 @@ function getRandomInt(count: number) {
 }
 export default function Reviews({ params } : {
     params: {
-        productId: string,
-        reviewId: string
+        productId: string;
+        reviewId: string;
     }
 }) {
     const random = getRandomInt(2);
