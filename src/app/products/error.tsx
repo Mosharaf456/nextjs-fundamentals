@@ -25,9 +25,18 @@ When recover client side then we need to convert the pages.tsx as client side co
 Errors bubble up up to closest parent error boundary.
 An error.tsx file will cater to errors for all its nested child segments.
 
+
 By possitioning the error.tsx file at different levels in nested folder of the route , you can achieve a more granular error handling strategy.
+An error.tsx file will cater to errors for all its nested child segments.
 
 Note: recommended to place error.tsx in specific route segment directory to handle errors for that specific route segment.
+
+***Handling errors in layout 
+The error boundary is placed in the layout component to handle errors for all the pages in the application.
+The error boundary doesn,t catch errors thrown by layout beacuse it,s nested inside the layout component.
+
+
+So change the error.tsx of it,s parent directory to handle errors for the layout component.
 
 
 */
@@ -37,8 +46,8 @@ export default function ErrorBoundary({
     error, 
     reset 
 }: { 
-    error: Error;
-    reset: () => void;
+    error: Error,
+    reset: () => void
 }) {
     return (
         <div>

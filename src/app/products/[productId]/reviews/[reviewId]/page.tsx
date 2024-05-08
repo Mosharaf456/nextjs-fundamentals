@@ -16,7 +16,7 @@ http://localhost:3000/products/10088/reviews/1
 
 */
 
-"use client";
+"use client"; // for client side ERROR CATCH 
 
 import Link from "next/link"; // for client side navigation
 import { notFound } from "next/navigation";   // programatically render not found page 
@@ -26,15 +26,15 @@ function getRandomInt(count: number) {
 }
 export default function Reviews({ params } : {
     params: {
-        productId: string;
-        reviewId: string;
+        productId: string,
+        reviewId: string
     }
 }) {
-    const random = getRandomInt(2);
-    if(random == 1) {
-        // Error handling 
-        throw new Error('Something went wrong review ID, Error handling in Next.js');
-    }
+    // const random = getRandomInt(2);
+    // if(random == 1) {
+    //     // Error handling 
+    //     throw new Error('Something went wrong review ID, Error handling in Next.js');
+    // }
 
     // programatically render not found page if reviewId is greater than 10000
     if(parseInt(params.reviewId) > 10000) {
