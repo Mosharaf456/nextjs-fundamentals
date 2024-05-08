@@ -1,11 +1,24 @@
-import UserAnalytics from "@/components/UserAnlytics";
-
-export default function ComDashboard({ children }: { children: React.ReactNode}) {
+export default function ComDashboard({
+    children,
+    users,
+    revenue,
+    notifications
+}: { 
+    children: React.ReactNode,
+    users: React.ReactNode,
+    revenue: React.ReactNode,
+    notifications: React.ReactNode
+}) {
     return (
         <div>
             <div>{children}</div>
-            <UserAnalytics />
-            <h1>Welcome Complex Dashboard!</h1>
+            <div style={{ display: "flex", }}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <div>{users}</div>
+                    <div>{revenue}</div>
+                </div>
+                <div style={{ display: "flex", flex:1 }}>{notifications}</div>
+            </div>
         </div>
     )
 }
