@@ -104,6 +104,13 @@ To enable client side navigation Next.js provide us with the Link component.
 The <Link> component is a React component that extends the HTML <a> element and it,s the primary way to navigate between routes in Next.js 
 To use it , we need to import it from "next/link" 
 
+
+
+*** Parallel routes
+Parallel routes are an advanced routing mechanisim that allows for the simultaneous rendering of multiple pages within same layout.
+Parallel routes are created by placing a file named parallel.tsx in the route segment directory.
+
+
 */
 
 import Link from 'next/link'
