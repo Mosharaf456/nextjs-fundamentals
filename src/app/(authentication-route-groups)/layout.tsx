@@ -5,15 +5,16 @@ ex. /login, /register, /forgot-pass
 */
 
 "use client";
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import "./style.css";
 
 export default function AuthenticationLayout({ children }: { children: React.ReactNode}) {
     const navLinks = [
-        { id:1, name: 'Login', href: '/login1' },
-        { id:2, name: 'Register', href: '/register1' },
-        { id:3, name: 'Forgot Password', href: '/forget-pass' },
+        { name: 'Login', href: '/login1' },
+        { name: 'Register', href: '/register1' },
+        { name: 'Forgot Password', href: '/forget-pass' },
     ];
     const pathname = usePathname();
     return (
@@ -22,10 +23,9 @@ export default function AuthenticationLayout({ children }: { children: React.Rea
                 const isActive =  pathname.startsWith(link.href)
                 
                 return (
-                    <>
+                    <React.Fragment key={link.href}>
                         <br /> 
                         <Link 
-                            key={link.id} 
                             href={link.href}
                             // style={{
                             //     color: isActive ? 'red' : 'black',
@@ -36,7 +36,7 @@ export default function AuthenticationLayout({ children }: { children: React.Rea
                         >
                             {link.name}
                         </Link>
-                    </>
+                    </React.Fragment>
                     )
             })}
             
