@@ -17,7 +17,6 @@ Similar to layouts , templates also receive children as prop which will render t
 
 
 
-
 */
 
 "use client";
