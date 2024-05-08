@@ -25,7 +25,7 @@ the current route parameters, external data or metadata in parent segment.
 To define dynamic metadata, export a function named generateMetadata that accepts the current route parameters as an argument.
 
 */
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 export const metadata : Metadata = { // static metadata object
   title: {

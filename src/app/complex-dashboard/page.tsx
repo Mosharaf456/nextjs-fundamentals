@@ -25,7 +25,7 @@ where different sections serve distinct purposes.
 export default function ComplexDashboard() {
     return (
         <div>
-            <p> Complex Dashboard</p>
+            <h1>Complex Dashboard</h1>
         </div>
     );
 }
