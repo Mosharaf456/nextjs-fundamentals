@@ -12,6 +12,15 @@ import Card from "@/components/Card";
 
 export default function Login() {
     return (
-        <Card>Login Page</Card>
+        <Card>
+            <h1>Login page</h1>
+            <input type='text' placeholder='Username' />
+            <br />
+            <br />
+            <input type='password' placeholder='Password' />
+            <br />
+            <br />
+            <button>Login</button>
+        </Card>
     );
 }
