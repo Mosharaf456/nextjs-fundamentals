@@ -27,6 +27,6 @@ export default function Comments({ params }: {
         </h1>
     }
     return (
-        <h1>Comment home page</h1>
+        <h1>Comment home page $</h1>
     )
 }
