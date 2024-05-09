@@ -34,6 +34,9 @@ $$Route handlers run server-side , ensuring that sensitive data like private key
 
 $$$$Router handlers are equivalent of API routes in Page router.
 npx create-next-app route-handlers-demo --ts
+To test route handlers use VS code extension REST client named as Thunder Client
+
+
 
  */
 export default function ComDashboard({
