@@ -33,7 +33,6 @@ $$$ Route handlers are also great for making external API requests.
 $$Route handlers run server-side , ensuring that sensitive data like private keys remain secure and never exposed to the client / browser.
 
 $$$$Router handlers are equivalent of API routes in Page router.
-npx create-next-app route-handlers-demo --ts
 To test route handlers use VS code extension REST client named as Thunder Client
 
 
