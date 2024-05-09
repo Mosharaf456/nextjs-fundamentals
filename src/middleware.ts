@@ -1,16 +1,4 @@
 /*
-** Caching in route handlers
-http://localhost:3000/time
-In production modd it will Caching in route handlers of the time , time will not update on every request after first.
-
-Router handlers are cached by default in production mode when using GET method with the response object in NEXT.js
-
-How to opt out of caching in NEXT.js?
-- dynamic mood is used to opt out of caching in NEXT.js in segment Config Option
-- using Request object with the GET method 
-- employing dynamic functions like headers() and cookies() in the route handler
-- using any HTTP method other then GET 
-
 ******Middleware***********
 Middleware in NEXT.js is a powerful feature that offers a robust way to intercept and control the flow of requests
 and responses in the application.
@@ -30,12 +18,29 @@ Middleware can be used to:
 - Perform logging.
 
 
+Note: middleware.js or middleware.ts this file es kept into the src folder not app folder.
+
 */
+//  middleware also allows to rewrite the URL
 
-export const dynamic = "force-dynamic";
+import { NextResponse, type NextRequest } from "next/server";
 
-export async function GET() {
-    return Response.json({
-        time: new Date().toLocaleTimeString()
-    });
+
+export function middleware(request: NextRequest) {
+    // 2. Conditional statement in the route handler
+    if(request.nextUrl.pathname === "/profile") {
+        return NextResponse.redirect(new URL("/hello", request.url)); 
+    }
+
+    //1. Custom matcher config
+    // console.log("middleware");
+    // return NextResponse.redirect(new URL("/", request.url)); // /profile will match and  goes to / or root route page
 }
+
+//1. Custom matcher config
+// export const config  = {
+//     matcher: "/profile",
+// };
+
+
+
