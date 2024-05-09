@@ -20,6 +20,8 @@ GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD, CONNECT, TRACE
 Note: By default route.ts file access if same level of folders file page.tsx, route.ts , so change it directory name to api for route.ts 
 to avoid conflict with page.tsx file.
 
+extension to remeber code : Pieces for VS Code
+
 
  */
 export async function GET() {
