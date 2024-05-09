@@ -23,8 +23,17 @@ Convention:
  (...) TO MATCH SEGMENTS FROM ROOT app directory.
  
 
+****Route handlers
+We can also create custom request handlers for our routes using a feature called route handlers.
+Unlike page routes, which respond with HTML content, route handlers allow you to create RESTful endpoints, giving you full
+control over the response data.
+There is no overhead of having to create and configure a separate server, as the route handlers are built into the Next.js app.
 
+$$$ Route handlers are also great for making external API requests.
+$$Route handlers run server-side , ensuring that sensitive data like private keys remain secure and never exposed to the client / browser.
 
+$$$$Router handlers are equivalent of API routes in Page router.
+npx create-next-app route-handlers-demo --ts
 
  */
 export default function ComDashboard({
