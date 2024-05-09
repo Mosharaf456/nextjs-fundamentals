@@ -1,4 +1,7 @@
 /*
+http://localhost:3000/comments-two/2
+http://localhost:3000/profile
+
 Cookies are small pieces of data that a server sends to user,s web browser.
 The browser may store the cookie and send it back to same server with the later request.
 Cookies are used mainly three purposes:
@@ -7,6 +10,8 @@ Cookies are used mainly three purposes:
 3. Tracking : like recording and analyzing user behavior.
 
 How to set/get cookies in NEXT JS.?
+
+Caching in route handlers
 
 
 */
