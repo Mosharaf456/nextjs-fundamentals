@@ -4,7 +4,6 @@ since we are not using parameter request so we can prefix it with underscore(_)
 
 */
 
-import { parse } from "path";
 import { comments } from "../data";
 import { redirect } from "next/navigation";
 
@@ -15,7 +14,7 @@ export async function GET(
     if(parseInt(params.id) > comments.length ) {
         redirect("/comments-two");
     }
-    
+
     const comment = comments.find(comment => comment.id === parseInt(params.id));
     if (!comment) {
         return new Response("Comment not found", { status: 404 });
