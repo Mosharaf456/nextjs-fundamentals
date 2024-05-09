@@ -29,7 +29,9 @@ import { NextResponse, type NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
     // 2. Conditional statement in the route handler
     if(request.nextUrl.pathname === "/profile") {
-        return NextResponse.redirect(new URL("/hello", request.url)); 
+        // return NextResponse.redirect(new URL("/hello", request.url)); 
+        return NextResponse.rewrite(new URL("/hello", request.url));  // URL rewrite to profile from hello route
+
     }
 
     //1. Custom matcher config
