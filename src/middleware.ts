@@ -20,6 +20,9 @@ Middleware can be used to:
 
 Note: middleware.js or middleware.ts this file es kept into the src folder not app folder.
 
+Middleware also allows to efficiently control and intercept the request and response cycle , enabling redirect
+URL rewrite and the  manipulation of headers and cookies.COmplete first section on routing in next js 
+
 */
 //  middleware also allows to rewrite the URL
 
@@ -27,12 +30,25 @@ import { NextResponse, type NextRequest } from "next/server";
 
 
 export function middleware(request: NextRequest) {
-    // 2. Conditional statement in the route handler
-    if(request.nextUrl.pathname === "/profile") {
-        // return NextResponse.redirect(new URL("/hello", request.url)); 
-        return NextResponse.rewrite(new URL("/hello", request.url));  // URL rewrite to profile from hello route
-
+    // cookies and headers setting
+    // cookies theme 
+    // custom headers for all reponses 
+    const response = NextResponse.next();
+    const themePreference = request.cookies.get("theme");
+    if(!themePreference) {
+        response.cookies.set("theme", "dark");
+        response.headers.set("custom-header", "custom-value"); // custom headers for all reponses debugging purpose 
     }
+    // must back this tailored response
+    return response;
+
+
+    // 2. Conditional statement in the route handler
+    // if(request.nextUrl.pathname === "/profile") {
+    //     // return NextResponse.redirect(new URL("/hello", request.url)); 
+    //     return NextResponse.rewrite(new URL("/hello", request.url));  // URL rewrite to profile from hello route
+
+    // }
 
     //1. Custom matcher config
     // console.log("middleware");
