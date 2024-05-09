@@ -1,3 +1,11 @@
+/* 
+***Dynamic route handlers works similar like route handlers
+{ params } = context 
+context is an object that contains the request object and other properties
+since we are not using parameter request so we can prefix it with underscore(_) 
+
+*/
+
 import { comments } from "./data";
 
 export async function GET() {
