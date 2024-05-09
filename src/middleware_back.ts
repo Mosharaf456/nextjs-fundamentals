@@ -30,21 +30,35 @@ import { NextResponse, type NextRequest } from "next/server";
 
 
 export function middleware(request: NextRequest) {
-    // 2. Conditional statement in the route handler
-    if(request.nextUrl.pathname === "/profile") {
-        return NextResponse.redirect(new URL("/hello", request.url)); 
-        // return NextResponse.rewrite(new URL("/hello", request.url));  // URL rewrite to profile from hello route
-
+    // cookies and headers setting
+    // cookies theme 
+    // custom headers for all reponses 
+    const response = NextResponse.next();
+    const themePreference = request.cookies.get("theme");
+    if(!themePreference) {
+        response.cookies.set("theme", "dark");
+        response.headers.set("custom-header", "custom-value"); // custom headers for all reponses debugging purpose 
     }
+    // must back this tailored response
+    return response;
 
-    //Custom matcher config
-    return NextResponse.redirect(new URL("/", request.url)); // /profile will match and  goes to / or root route page
+
+    // 2. Conditional statement in the route handler
+    // if(request.nextUrl.pathname === "/profile") {
+    //     // return NextResponse.redirect(new URL("/hello", request.url)); 
+    //     return NextResponse.rewrite(new URL("/hello", request.url));  // URL rewrite to profile from hello route
+
+    // }
+
+    //1. Custom matcher config
+    // console.log("middleware");
+    // return NextResponse.redirect(new URL("/", request.url)); // /profile will match and  goes to / or root route page
 }
 
 //1. Custom matcher config
-export const config  = {
-    matcher: "/about",
-};
+// export const config  = {
+//     matcher: "/profile",
+// };
 
 
 
