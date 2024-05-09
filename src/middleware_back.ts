@@ -61,4 +61,18 @@ export function middleware(request: NextRequest) {
 // };
 
 
+/*
+Topic covered yet:
+Route
+definations
+Pages and layout
+Dynamic route 
+Route groups 
+Linking and navigation
+Handling error in routes 
+Parallel and intercepting routes 
+Route handlers-- helps define restful API endpoint and middleware 
+Cookies and headers
+
+*/
 
