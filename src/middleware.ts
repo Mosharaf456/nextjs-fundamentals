@@ -25,6 +25,19 @@ URL rewrite and the  manipulation of headers and cookies.COmplete first section 
 
 middleware also allows to rewrite the URL
 
+******
+Static rendering is the default rendering strategy in the app router .
+All route are automatically prepared at build time and served as static HTML files.
+
+Prudction server - a optimized build is created once and you deploy that build. 
+
+A developmnet server - a new build is created every time you make a change to the code and see immediately those changes.
+We cann,t effort to build once , make changes , rebuild and so on .
+
+In development mode, a page will be pre-rendered for every request but in production , a page is pre-rendered once when we run build command . 
+
+
+
 */
 
 
