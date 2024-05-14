@@ -167,6 +167,7 @@ what device they,re using .
 
 ********the app router in NEXT js is built around the RSC architecture in the latest v14 
 
+By default , every compoennts in next js is a server component , which means it runs on the server and can access server resources like databases and file systems.
 
 
 
