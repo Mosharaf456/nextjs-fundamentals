@@ -41,7 +41,7 @@ export function middleware(request: NextRequest) { // Conditional statement in t
 
 // Custom matcher config
 export const config  = {
-    matcher: "/about",
+    matcher: ["/about"],
 };
 
 
