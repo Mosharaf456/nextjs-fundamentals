@@ -93,6 +93,42 @@ npm i react-slick slick-carousel @types/react-slick
 If you need to use client component inside server component then use the following : 
 use the folder outside of app folder and make a folder inside src named as components , make a client component inside client component, import that client component inito the server component and call that also.
 
+*************Context Providers*********
+Context providers are typically rendered near the root of an application to share global application state and logic 
+
+However react context is not supported in Server Components , attempting to create a context at the root of your application will result in an error. 
+
+To address this , you can create a context and render its provider inside a separate client component.
+Note: In NEXT js project the file is layout.js in the src->app->layout.js
+Invoking or wrapping the server component with the client component will allow you to use context providers in your application.
+But server still be server component and client will be client component.That server component will not converted into client component .
+
+
+****Client only code 
+Just as it,s importent to restrict certain operations to the server, it,s equally important to confine some functinality to the client.
+
+Client-only code typically with browser-specific features like DOM, the window object, localstorage etc whcih are not aviailable on the server.
+To prevent unintended server side usage of client side code , we can use a package called client-only.
+
+> npm install client-only
+import "client-only"
+It will throw an error if it is imported in the server-side code.
+
+***Client component placement**
+To compensate for server components not being able to manage state and handle interactivity , you need to create client components. 
+It,s recomended to position these client components lower in your component tree. 
+
+"use client" used in the parent component of the client component to make it client component.
+Parent also affects every child component and make it as a client component as well. 
+->src->components->Parent.tsx 
+->src->components->Child.tsx
+
+So it,s recomended to position these client components lower in your component tree, ideally making them leaf component .
+
+***** Interleaving Server and Client Components
+
+
+
 
 */
 
