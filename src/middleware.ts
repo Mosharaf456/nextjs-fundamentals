@@ -47,6 +47,25 @@ This enables users to see the page content faster, without having to wait for th
 
 Streaming is integrated into Next js App router by default . 
 
+***Server and Client component pattern in NEXT.js
+Server components
+- Fetching data 
+- Directly accessing backend resources 
+- Protecting sensitive information (Like access tokens and API keys) on the server. 
+- keeping large dependencies server-side , which helps in reducing client-side javascript.
+
+Client components
+- Best using of adding interactivity 
+- Handling event listeners(such as onClick(), onChange() etc)
+
+- Mannaging state and lifecycle effects ( using hooks like useState(),useReducer(), useEffect())
+- Using browser-exclusive APIs 
+- Using custom hooks 
+- Using React Class components 
+
+
+
+
 
 
 */
