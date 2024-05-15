@@ -64,8 +64,28 @@ Client components
 - Using React Class components 
 
 
+****Serve-only code 
+
+Certain code intended to execute only on the server . 
+You might have module or function tha use multiple libraries , use environment variables, interact directly with database,
+or process confidential information. 
+
+Since js modules can be shared , it,s poosible for code that,s  meant only for the server to unintentionally end up in the client . 
+
+If server-side code gets bundled into the client-side JS , it could lead to a bloated bundle size , expose sensitive information , or cause other security issues.
+database queries, sensitive business logic.
+
+It is crucial to ensure that server-only code is not included in the client-side code to protect the application's security and integrity.
+Provides built time error if dev accidentally imports server-only code in client-side code.
 
 
+TO ensure server-side only function code then install the following package: server-only package
+> npm install server-only
+import "server-only";
+
+
+it " import "server-only"; " will throw an error if it is imported in the server-side code.
+For accidentally importing server-side code in the client-side code, the server-only package provides a built-time error to prevent it from happening.
 
 
 */
