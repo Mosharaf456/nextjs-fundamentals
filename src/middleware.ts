@@ -87,6 +87,12 @@ import "server-only";
 it " import "server-only"; " will throw an error if it is imported in the server-side code.
 For accidentally importing server-side code in the client-side code, the server-only package provides a built-time error to prevent it from happening.
 
+***Third party packages 
+npm i react-slick slick-carousel @types/react-slick 
+
+If you need to use client component inside server component then use the following : 
+use the folder outside of app folder and make a folder inside src named as components , make a client component inside client component, import that client component inito the server component and call that also.
+
 
 */
 
