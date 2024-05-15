@@ -25,8 +25,8 @@ URL rewrite and the  manipulation of headers and cookies.COmplete first section 
 
 middleware also allows to rewrite the URL
 
-******
-Static rendering is the default rendering strategy in the app router .
+******Rendering techniques in NEXT.js********
+******Static rendering is the default rendering strategy in the app router .
 All route are automatically prepared at build time and served as static HTML files.
 
 Prudction server - a optimized build is created once and you deploy that build. 
@@ -35,6 +35,17 @@ A developmnet server - a new build is created every time you make a change to th
 We cann,t effort to build once , make changes , rebuild and so on .
 
 In development mode, a page will be pre-rendered for every request but in production , a page is pre-rendered once when we run build command . 
+
+Prefetching is a technique used to preload a route in the background before the user navigate to it. 
+
+***Dynamic rendering is a server rendering strategy where route are rendered for each user at reuest time.
+Dynamic functions are cookies(), headers(), serachParams object.
+
+** Streaming that allows for progressive UI rendering from the server. 
+Work is divided into smaller chunks and sent to the client as soon as they are ready.
+This enables users to see the page content faster, without having to wait for the entire page to finish rendering on the server.
+
+Streaming is integrated into Next js App router by default . 
 
 
 
