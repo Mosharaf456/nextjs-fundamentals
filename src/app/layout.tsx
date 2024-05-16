@@ -25,7 +25,9 @@ the current route parameters, external data or metadata in parent segment.
 To define dynamic metadata, export a function named generateMetadata that accepts the current route parameters as an argument.
 
 */
+
 import type { Metadata } from 'next';
+import { UserProvider } from '@/components/AuthProvider';
 
 export const metadata : Metadata = { // static metadata object
   title: {
@@ -72,7 +74,9 @@ export default function RootLayout({
               textAlign: 'center',
             }}
           >
-            {children}
+              <UserProvider>
+                {children}
+              </UserProvider>
           </main>
 
           <footer

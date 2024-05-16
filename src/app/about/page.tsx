@@ -1,11 +1,13 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+"use client";
 
-export const metadata: Metadata = {
-    title: "About Page- Fundamentals of NEXT JS",
-}
+import Link from 'next/link'
+import { useUser } from '@/components/AuthProvider';
+
 
 export default function About() {
+    console.log("Client component About Page");
+    const user = useUser();
+    console.log(user.userDetails);
     return (
         <div>
             <Link href='/'>home</Link>
