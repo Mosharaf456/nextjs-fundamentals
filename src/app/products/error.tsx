@@ -40,6 +40,7 @@ So change the error.tsx of it,s parent directory to handle errors for the layout
 
 
 */
+
 "use client";
 
 export default function ErrorBoundary({ 
