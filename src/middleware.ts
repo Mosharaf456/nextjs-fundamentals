@@ -125,7 +125,8 @@ Parent also affects every child component and make it as a client component as w
 
 So it,s recomended to position these client components lower in your component tree, ideally making them leaf component .
 
-***** Interleaving Server and Client Components
+***** Interleaving Server and Client Components 
+- interleaving
 
 
 
