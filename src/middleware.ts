@@ -147,14 +147,15 @@ export function middleware(request: NextRequest) { // Conditional statement in t
     }
 
     // Custom matcher config matches route comes here 
-    return NextResponse.redirect(new URL("/", request.url)); 
+    // return NextResponse.redirect(new URL("/", request.url)); 
 }
 
 // Custom matcher config
-export const config  = {
-    matcher: ["/test"], // if /test matched then it will goes to  / route page as last NextResponse.redirect(new URL("/", request.url)); 
-};
+// export const config  = {
+//     matcher: ["/test"], // if /test matched then it will goes to  / route page as last NextResponse.redirect(new URL("/", request.url)); 
+// };
 
+// Note: both custom matcher config and conditional statement in the route handler can,t be used at the same time.
 
 
 
