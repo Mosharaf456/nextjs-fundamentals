@@ -146,13 +146,13 @@ export function middleware(request: NextRequest) { // Conditional statement in t
         return NextResponse.redirect(new URL("/hello", request.url)); 
     }
 
-    // Custom matcher config
-    return NextResponse.redirect(new URL("/", request.url)); // /contact will match and  goes to / or root route page
+    // Custom matcher config matches route comes here 
+    return NextResponse.redirect(new URL("/", request.url)); 
 }
 
 // Custom matcher config
 export const config  = {
-    matcher: ["/contact"], // /contact will match and goes to / route page
+    matcher: ["/test"], // if /test matched then it will goes to  / route page as last NextResponse.redirect(new URL("/", request.url)); 
 };
 
 
