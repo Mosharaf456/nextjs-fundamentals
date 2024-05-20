@@ -19,7 +19,7 @@ export default function Interleaving() {
     return (
         <div>
             <h1>Interleaving Page</h1>
-                {/* <ServerComponentTwo/> */}
+                <ServerComponentTwo/>
                 
             <ClientComponentOne>
                 <ServerComponentOne/>
